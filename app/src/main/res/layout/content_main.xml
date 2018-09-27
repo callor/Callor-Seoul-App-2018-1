@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:background="@drawable/mug_obj_backgroud"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main">
+
+  <!--
+  horizontal Guidline
+  View들을 수직방향으로 배치할때 기준선으로 삼기 위한 설정
+  -->
+<android.support.constraint.Guideline
+    android:id="@+id/guide_line_01"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintGuide_percent="0.33"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guide_line_02"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.66"/>
+
+
+    <TextView
+        android:id="@+id/txt_menu_01"
+        android:gravity="center"
+        android:background="@drawable/text_view_selector"
+        android:text="임신/출산"
+        android:textSize="30sp"
+        android:textColor="#FFFF00"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/guide_line_01"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" />
+
+    <TextView
+        android:id="@+id/txt_menu_02"
+        android:gravity="center"
+        android:background="@drawable/text_view_selector"
+        android:text="영유아"
+        android:textSize="30sp"
+        android:textColor="#FFFF00"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/guide_line_01"
+        app:layout_constraintBottom_toBottomOf="@id/guide_line_02"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" />
+
+    <TextView
+        android:id="@+id/txt_menu_03"
+        android:gravity="center"
+        android:background="@drawable/text_view_selector"
+        android:text="아동"
+        android:textSize="30sp"
+        android:textColor="#FFFF00"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/guide_line_02"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" />
+
+</android.support.constraint.ConstraintLayout>
